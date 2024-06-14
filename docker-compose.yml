@@ -1,0 +1,16 @@
+services:
+  policy-analytics:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: policy-analytics:latest
+    container_name: policy-analytics
+    command: "/bin/bash"
+    stdin_open: true
+    tty: true
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/workspace
+    env_file:
+      - .env

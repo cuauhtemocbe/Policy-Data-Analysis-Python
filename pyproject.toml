@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "policy-analytics"
+version = "0.1.0"
+description = "Ambiente para análisis de datos de políticas públicas con Ciencia de Datos"
+authors = ["Kuautli <cuauhtemocbe@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.3"
+pandas = "^2.2.1"
+ipykernel = "^6.29.4"
+scikit-learn = "^1.4.2"
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.1"
+jupyterlab = "^4.1.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = [
+    ".", "src"
+]
+testpaths = [
+    "tests"
+]
